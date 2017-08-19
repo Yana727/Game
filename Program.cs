@@ -6,7 +6,10 @@ namespace Game
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            GamePiece queen = new GamePiece();
+            queen.move(4, 5);
+            GamePiece pawn = new GamePiece();
+            pawn.freeze();
         }
     }
 }
