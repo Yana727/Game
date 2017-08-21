@@ -13,46 +13,35 @@ namespace Game
             positionY = 0;
             frozen = false;
             System.Console.WriteLine($"{this.positionX}");
-
-            public void move(int x, int y)  //why not?
+        }
+        public void move(int x, int y)  //why not?
+        {
+            System.Console.WriteLine($"moving to the {x},{y}");
+            if (this.frozen == false)
             {
-                System.Console.WriteLine("moving to the");
-                if (this.frozen == false)
-                {
-                    this.positionY = y;
-                    this.positionX = x;
-                }
+                this.positionY = y;
+                this.positionX = x;
             }
-            public void freeze()
-            {
-                //if the game piece is not frozen
-                // then call the freeze sets to the frozen variable true
+        }
+        public void freeze()
+        {
+            //if the game piece is not frozen
+            // then call the freeze sets to the frozen variable true
 
-                if (this.frozen == false)
-                {
-                    this.frozen = true;
-                }
-                System.Console.WriteLine(this.frozen);
-            }
-            public void unfreeze()
+            if (this.frozen == false)
             {
-                if (this.frozen == true)
-                {
-                    this.frozen = false;
-                }
-                System.Console.WriteLine(this.frozen);
+                this.frozen = true;
             }
-
-            public void move(int x, int y)
+            System.Console.WriteLine(this.frozen);
+        }
+        public void unfreeze()
+        {
+            if (this.frozen == true)
             {
-                System.Console.WriteLine("moving to the");
-                if (this.frozen == false)
-                {
-                    this.positionY = y;
-                    this.positionX = x;
-                }
-
+                this.frozen = false;
             }
+            System.Console.WriteLine(this.frozen);
         }
     }
 }
+
